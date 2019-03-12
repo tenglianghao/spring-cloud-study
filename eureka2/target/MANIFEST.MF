@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: eureka2
+Implementation-Version: 1.0-SNAPSHOT
+Built-By: lhteng
+Implementation-Vendor-Id: com.jack
+Created-By: Apache Maven 3.6.0
+Build-Jdk: 1.8.0_191
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/spring-cloud-study/eureka2
+

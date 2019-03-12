@@ -1,0 +1,26 @@
+server:
+  port: 9000
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:3000/eureka/  #eureka服务端提供的注册地址 参考服务端配置的这个路径
+  instance:
+    instance-id: zuul-1 #此实例注册到eureka服务端的唯一的实例ID
+    prefer-ip-address: true
+
+spring:
+  application:
+    name: zuul
+
+zuul:
+  ignored-services: "*" # 将默认的微服务名访问方式禁用掉，防止微服务名暴露
+  prefix: /api          #在访问路径前面加上前缀
+  strip-prefix: true   #默认是true。true路由后删掉了前缀
+  routes:
+    mypower:
+      serviceId: server-power
+      path: /power1/**   #将 power1 路由到  server-power微服务上
+    myuser:
+      serviceId: client-user
+      path: /user1/**
